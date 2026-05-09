@@ -463,14 +463,21 @@
     .success-msg h3 { font-family: var(--font-display); font-size: 40px; font-weight: 400; letter-spacing: 2px; margin-bottom: 10px; }
     .success-msg p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    @media (max-width: 900px) {
+    @media (hover: none) {
+      .cursor-dot, .cursor-ring { display: none; }
+      body { cursor: auto !important; }
+      *, *::before, *::after { cursor: auto !important; }
+      a, button, input, select, label { cursor: auto !important; }
+    }
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
       section { padding: 80px 24px; }
       .hero { padding: 100px 24px 80px; }
       .hero-stats { display: none; }
       .why { grid-template-columns: 1fr; gap: 48px; }
-      .why-visual { height: 330px; }
+      .why-visual { height: auto; display: flex; flex-direction: column; gap: 16px; }
+      .why-card { position: static; width: 100%; }
+      .why-connector { display: none; }
       .steps { grid-template-columns: 1fr 1fr; }
       .pricing-tiers { grid-template-columns: 1fr; gap: 32px; }
       .pricing-card { padding: 32px 24px; }
