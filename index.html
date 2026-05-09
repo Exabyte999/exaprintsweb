@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ExaPrints — Human Clipping for Streamers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,7 +78,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 48px;
+      padding-top: calc(24px + env(safe-area-inset-top));
       border-bottom: 1px solid transparent;
+      background: var(--bg);
       transition: border-color 0.3s, background 0.3s;
     }
     nav.scrolled {
@@ -471,10 +473,10 @@
     }
 
     @media (max-width: 900px) {
-      nav { padding: 20px 24px; background: var(--bg); border-color: var(--border); }
+      nav { padding: 20px 24px; padding-top: calc(20px + env(safe-area-inset-top)); background: var(--bg); border-color: var(--border); }
       .nav-links { display: none; }
       section { padding: 80px 24px; }
-      .hero { padding: 100px 24px 80px; }
+      .hero { padding: 100px 24px 80px; padding-top: calc(100px + env(safe-area-inset-top)); }
       .hero-stats { display: none; }
       .why { grid-template-columns: 1fr; gap: 48px; }
       .why-visual { height: auto; display: flex; flex-direction: column; gap: 16px; }
