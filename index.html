@@ -184,15 +184,11 @@
       animation: fadeUp 0.8s 0.1s ease both;
     }
     .hero-title .accent { color: var(--accent); }
-    .hero-title .strike { position: relative; color: var(--muted); }
-    .hero-title .strike::after {
-      content: '';
-      position: absolute;
-      left: 0; right: 0;
-      top: 50%;
-      height: 4px;
-      background: var(--accent2);
-      transform: rotate(-1.5deg);
+    .hero-title .strike {
+      color: var(--muted);
+      text-decoration: line-through;
+      text-decoration-color: var(--accent2);
+      text-decoration-thickness: 4px;
     }
     .hero-sub {
       font-size: clamp(16px, 1.8vw, 20px);
